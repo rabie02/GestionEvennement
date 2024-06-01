@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <!-- Champ de recherche -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Liste des Événements"
+        android:textColor="@color/button_background"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="375dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_background"
+        android:hint="Rechercher un événement par nom"
+        android:inputType="text" />
+
+
+    <!-- RecyclerView pour afficher la liste des événements -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Bouton pour créer un nouvel événement -->
+    <Button
+        android:id="@+id/buttonCreateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer un Événement"
+        android:backgroundTint="@color/button_background"
+        android:layout_gravity="end"
+        android:layout_marginBottom="16dp"
+        style="@style/CustomButtonStyle"/>
+
+    <!-- Image décorative -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im2" />
+
+</LinearLayout>

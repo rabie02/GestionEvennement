@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:layout_width="181dp"
+        android:layout_height="158dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Logo de l'application"
+        android:src="@drawable/im4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Gestion du Budget"
+        android:textColor="@color/button_background"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Champ de saisie pour le montant total du budget -->
+    <EditText
+        android:id="@+id/editTextTotalBudget"
+        android:layout_width="377dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_background"
+        android:gravity="center"
+        android:hint="Total du Budget"
+        android:inputType="numberDecimal" />
+
+    <!-- Bouton pour ajouter une dépense -->
+    <Button
+        android:id="@+id/buttonAddExpense"
+        style="@style/CustomButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ajouter une Dépense" />
+
+    <ListView
+        android:id="@+id/listViewExpenses"
+        android:layout_width="345dp"
+        android:layout_height="178dp"
+        android:layout_marginBottom="16dp"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
+
+    <Button
+        android:id="@+id/buttonShowTotalExpenses"
+        style="@style/CustomButtonStyle"
+        android:layout_width="358dp"
+        android:layout_height="63dp"
+        android:text="Afficher le Total des Dépenses" />
+
+</LinearLayout>

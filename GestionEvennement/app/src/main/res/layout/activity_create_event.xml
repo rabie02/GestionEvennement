@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="16dp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="125dp"> <!-- Ajout de la couleur d'arrière-plan -->
+
+    <TextView
+        android:id="@+id/textViewEventCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Créer un Événement"
+        android:textColor="@color/button_background"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Champ pour le nom de l'événement -->
+
+    <!-- Champ pour la description de l'événement -->
+    <EditText
+        android:id="@+id/editTextEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:hint="Nom de l'événement"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewEventCreate" />
+
+    <EditText
+        android:id="@+id/editTextEventDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:hint="Description de l'événement"
+        android:inputType="textMultiLine"
+        android:minLines="3"
+        android:padding="12dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventName" />
+
+    <!-- Champ pour la date de début de l'événement -->
+    <EditText
+        android:id="@+id/editTextEventStartDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Date de début (JJ/MM/AAAA)"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventDescription" />
+
+    <!-- Champ pour la date de fin de l'événement -->
+    <EditText
+        android:id="@+id/editTextEventEndDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Date de fin (JJ/MM/AAAA)"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/input_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventStartDate" />
+
+    <!-- Bouton pour enregistrer l'événement -->
+    <Button
+        android:id="@+id/buttonSaveEvent"
+        style="@style/CustomButtonStyle"
+        android:layout_width="276dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:text="Enregistrer l'Événement"
+        android:textColor="@color/button_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextEventEndDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
